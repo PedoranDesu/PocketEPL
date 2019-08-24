@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_result">
+
+    <fragment
+        android:id="@+id/navigation_result"
+        android:name="com.pedoran.pocketepl.ui.matchResult.MatchResultFragment"
+        android:label="Result"
+        tools:layout="@layout/fragment_match_result" />
+
+    <fragment
+        android:id="@+id/navigation_upcoming"
+        android:name="com.pedoran.pocketepl.ui.upcomingMatch.UpcomingMatchFragment"
+        android:label="Upcoming"
+        tools:layout="@layout/fragment_upcoming_match" />
+
+    <fragment
+        android:id="@+id/navigation_team"
+        android:name="com.pedoran.pocketepl.ui.team.TeamFragment"
+        android:label="Teams"
+        tools:layout="@layout/fragment_team" />
+</navigation>

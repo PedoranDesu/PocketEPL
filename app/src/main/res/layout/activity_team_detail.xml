@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.teamDetail.TeamDetail">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailTeamOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:padding="10dp"
+                android:id="@+id/imgDetailTeam"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp" />
+
+            <TextView
+                android:id="@+id/tvDetailStrTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Real Madrid"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/white"
+                android:background="#37003C"
+                />
+            <TextView
+                android:id="@+id/tvStadium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Santiago Bernabeu"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/white"
+                android:background="#37003C"
+                />
+            <TextView
+                android:id="@+id/tvWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Santiago Bernabeu"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="7sp"
+                android:fontFamily="monospace"
+                android:textColor="@android:color/white"
+                android:background="#37003C"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textSize="20sp"
+        android:text="Player"
+        android:id="@+id/tvDetailTeamPlayer"
+        android:layout_below="@id/detailTeamOverview"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_detailPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvDetailTeamPlayer"
+        />
+
+</RelativeLayout>
